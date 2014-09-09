@@ -13,7 +13,16 @@ Which is clear from the definition.\endproof
 
 \beginproof
 The state space is $\{0,1,...\}$.
-
+Note that:
 \begin{align*}
-P(S_{n+1} = i_{n+1} | S_0 = i_0,...,S_{n}=i_{n}) &= P(S_{n}+Z_{n+1}=i_{n+1} | S_n=i_n )   
-\end{align*}\endproof
+P(S_{n+1} = i_{n+1} | S_0 = i_0,...,S_{n} &=i_{n}) &= P(i_n+Z_{n+1}=i_{n+1} | S_0 = i_0,...,S_{n-1}=i_{n-1} )
+\end{align*}
+
+But note here that $Z_{n+1}$ is indepdent of $Z_0,...,Z_{n-1}$, so $Z_{n+1}$ is independent of $S_0,...,S_{n-1}$ and we get that:
+\begin{align*}
+P(i_n+Z_{n+1}=i_{n+1} | S_0 = i_0,...,S_{n-1}=i_{n-1} ) &= P(i_n+Z_{n+1}=i_{n+1})\\
+&=  P(S_n+Z_{n+1}=i_{n+1} |S_n = i_n) 
+\end{align*}
+
+It is clear that there is $1-p$ chance that you stay where you are at an given moment. And a chance $p$ that you move on to next state. So we get transition matrix $\Bbb N \times \Bbb N$ with $1-p$ on the diagonal, and $p$ on the line above the diagonal and the rest is $0$.
+\endproof
