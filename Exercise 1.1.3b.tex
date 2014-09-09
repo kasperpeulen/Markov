@@ -1,0 +1,7 @@
+\exercise{1.1.3b}{Show that all Markov chains can be realized this way.}
+
+\beginproof
+Suppose $(X_n)$ is a Markov chain. We are going to show that there exists a function $G: I \times [0,1] \to I$ such that $X_{n+1}=G(X_n,Y_{n+1})$ for all $n\geq 0$. We know that 
+\[P(X_{n}=j | X_{n-1} =i) = p_{ij}. \]
+So $G(X_{n-1}=i,U_n = k)$ must be equal to $j$ with chance $p_{ij}$. Note that $P(k \in (\sum_{l=0}^{j-1} p_{il}, \sum_{l=0}^j p_{il}))=p_{ij}$. So we set $G(i,k)=j$ if $k \in (\sum_{l=0}^{j-1} p_{il}, \sum_{l=0}^j p_{il})$. 
+\endproof
