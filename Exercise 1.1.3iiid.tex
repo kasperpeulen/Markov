@@ -1,0 +1,9 @@
+\exercise{1.1.3iiid}{$(X_n,Y_n)=(S_n,S_0+...+S_n)$}
+
+The state space is $(\Bbb N, \Bbb N)$. And we have:
+
+\begin{align*}
+&P((X_{n+1},Y_{n+1}) =(i_{n+1},j_{n+1})| (X_0,Y_0)=(0,0),...,(X_n,Y_n)=i_n,j_n)) \\&= P(Z_{n+1}=i_{n+1}-i_n,Z_{n+1}=j_{n+1}-j_{n}-i_n | (X_0,Y_0)=(0,0),...,(X_{n-1},Y_{n-1})=i_{n-1},j_{n-1}) \\
+\end{align*}
+
+But again $Z_{n+1}$ is independent of $Z_1,...,Z_{n-1}$ and so also of $S_1,...,S_{n-1}$ and the sums of random variables. So therefore, it is a markov chain. 
